@@ -264,7 +264,10 @@ class PlotModule extends Component {
 								b: 36,
 							},
 							xaxis: {
-								fixedrange: true
+								fixedrange: true,
+								tickfont: {
+									size: 8,
+								}
 							},
 							yaxis: {
 								fixedrange: true
