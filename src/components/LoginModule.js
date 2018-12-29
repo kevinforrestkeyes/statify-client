@@ -10,7 +10,7 @@ class LoginModule extends Component {
 	render() {
 		return (
 			<div className="module__login">
-				<a className="login-button" href="http://localhost:8888">
+				<a className="login-button" href="https://statify-server.herokuapp.com/">
 					get started
 				</a>
 			</div>
