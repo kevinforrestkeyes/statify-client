@@ -209,9 +209,9 @@ class PlotModule extends Component {
 
 	render() {
 		return (
-			<div className="module__plot">
+			<div className={`module__plot ${this.state.metric} ${this.state.chart_type}`}>
 				{this.state.chart_type === 'pie' && (
-					<Plot
+					<Plot className="plot"
 						data={[
 							{
 								type: this.state.chart_type,
@@ -223,19 +223,27 @@ class PlotModule extends Component {
 							title: `${this.state.metric} ${this.state.area} ${
 								this.state.term
 							}`,
-							width: 360,
-							height: 220,
+							autosize: true,
 							margin: {
 								l: 24,
 								r: 24,
 								t: 24,
 								b: 36,
 							},
+							legend: {
+								"orientation": "h"
+							},
+							xaxis: {
+								fixedrange: true
+							},
+							yaxis: {
+								fixedrange: true
+							}
 						}}
 					/>
 				)}
 				{this.state.chart_type === 'bar' && (
-					<Plot
+					<Plot className="plot"
 						data={[
 							{
 								type: this.state.chart_type,
@@ -248,14 +256,19 @@ class PlotModule extends Component {
 							title: `${this.state.metric} ${this.state.area} ${
 								this.state.term
 							}`,
-							width: 360,
-							height: 220,
+							autosize: true,
 							margin: {
 								l: 24,
 								r: 24,
 								t: 24,
 								b: 36,
 							},
+							xaxis: {
+								fixedrange: true
+							},
+							yaxis: {
+								fixedrange: true
+							}
 						}}
 					/>
 				)}

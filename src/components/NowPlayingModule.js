@@ -71,7 +71,7 @@ class NowPlayingModule extends Component {
 							<p className="info-field artist-name">
 								{this.state.now_playing.artist}
 							</p>
-							<p className="info-field">—</p>
+							<p className="info-field separator">—</p>
 							<p className="info-field album-name">
 								{this.state.now_playing.album_name}
 							</p>

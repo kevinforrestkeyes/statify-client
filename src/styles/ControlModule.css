@@ -4,7 +4,7 @@
   min-height: 48px;
 }
 .module__control .data-selectors {
-  height: 100%;
+  height: 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -78,4 +78,35 @@
   border: 1px solid #d35400;
   background-color: #edbb99;
   border-radius: 3px;
+}
+@media (max-width: 480px) {
+  .module__control {
+    max-width: 100%;
+    width: auto;
+    display: inline;
+  }
+  .module__control .data-selectors,
+  .module__control .metric-selector {
+    height: 48px;
+  }
+  .module__control .data-selectors .selector-label,
+  .module__control .metric-selector .selector-label {
+    width: 46px;
+  }
+  .module__control .data-selectors button,
+  .module__control .metric-selector button {
+    width: 52px;
+  }
+  .module__control .data-selectors .group-selector .selector-label,
+  .module__control .metric-selector .group-selector .selector-label,
+  .module__control .data-selectors .term-selector .selector-label,
+  .module__control .metric-selector .term-selector .selector-label {
+    width: 46px;
+  }
+  .module__control .data-selectors .group-selector button,
+  .module__control .metric-selector .group-selector button,
+  .module__control .data-selectors .term-selector button,
+  .module__control .metric-selector .term-selector button {
+    width: 52px;
+  }
 }
