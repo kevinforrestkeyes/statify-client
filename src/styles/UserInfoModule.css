@@ -1,0 +1,21 @@
+.module__user-info {
+  display: flex;
+  flex-direction: column;
+}
+.module__user-info .user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.module__user-info .user-info .info-fields {
+  max-width: 150px;
+  margin-left: 12px;
+}
+.module__user-info .user-info .info-fields .info-field {
+  margin: 4px 0;
+  font-size: 12px;
+}
+.module__user-info .user-info .user-image {
+  max-width: 48px;
+  border-radius: 0 12px 12px 12px;
+}

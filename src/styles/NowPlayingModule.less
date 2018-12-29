@@ -1,0 +1,41 @@
+.module__now-playing {
+	display: flex;
+	flex-direction: column;
+
+	&.inactive {
+		display: none;
+	}
+
+	.song-info {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		.info-fields {
+			margin-left: 12px;
+
+			.artist-album {
+				display: flex;
+				align-items: center;
+
+				.artist-name {
+					margin-right: 4px;
+				}
+
+				.album-name {
+					margin-left: 4px;
+				}
+			}
+
+			.info-field {
+				margin: 4px 0;
+				font-size: 12px;
+			}
+		}
+
+		.album-art {
+			max-width: 48px;
+			border-radius: 12px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.module__plot .modebar {
+  display: none;
+}
+.module__plot .unsupported-message {
+  width: 360px;
+}
+.module__plot .unsupported-message .message-text {
+  margin: 0;
+  font-size: 10px;
+}

@@ -1,0 +1,33 @@
+.module__now-playing {
+  display: flex;
+  flex-direction: column;
+}
+.module__now-playing.inactive {
+  display: none;
+}
+.module__now-playing .song-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.module__now-playing .song-info .info-fields {
+  margin-left: 12px;
+}
+.module__now-playing .song-info .info-fields .artist-album {
+  display: flex;
+  align-items: center;
+}
+.module__now-playing .song-info .info-fields .artist-album .artist-name {
+  margin-right: 4px;
+}
+.module__now-playing .song-info .info-fields .artist-album .album-name {
+  margin-left: 4px;
+}
+.module__now-playing .song-info .info-fields .info-field {
+  margin: 4px 0;
+  font-size: 12px;
+}
+.module__now-playing .song-info .album-art {
+  max-width: 48px;
+  border-radius: 12px;
+}

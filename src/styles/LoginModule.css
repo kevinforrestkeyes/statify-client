@@ -1,0 +1,8 @@
+.module__login .login-button {
+  border-radius: 3px;
+  display: block;
+  font-family: Arial;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+}
