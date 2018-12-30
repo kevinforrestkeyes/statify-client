@@ -217,6 +217,9 @@ class PlotModule extends Component {
 								type: this.state.chart_type,
 								values: this.state.values,
 								labels: this.state.labels,
+								marker: {
+									colors: ['#293372','#909CF1','#1D2241','#7E8EF3','#6F7280','#A8AECD','#2B3256','#333541','#4B5383','#5263CB']
+								}
 							},
 						]}
 						layout={{
@@ -249,6 +252,9 @@ class PlotModule extends Component {
 								type: this.state.chart_type,
 								x: this.state.labels,
 								y: this.state.values,
+								marker: {
+									color: "#909CF1",
+								},
 								hoverinfo: 'none',
 							},
 						]}
@@ -270,7 +276,10 @@ class PlotModule extends Component {
 								}
 							},
 							yaxis: {
-								fixedrange: true
+								fixedrange: true,
+								tickfont: {
+									size: 8,
+								}
 							}
 						}}
 					/>
