@@ -253,7 +253,7 @@ class PlotModule extends Component {
 								x: this.state.labels,
 								y: this.state.values,
 								marker: {
-									color: "#909CF1",
+									color: "#3D4470",
 								},
 								hoverinfo: 'none',
 							},
@@ -264,19 +264,27 @@ class PlotModule extends Component {
 							}`,
 							autosize: true,
 							margin: {
-								l: 24,
+								l: 36,
 								r: 24,
 								t: 24,
-								b: 36,
+								b: 40,
 							},
 							xaxis: {
 								fixedrange: true,
+								title: "popularity range",
+								titlefont: {
+									size: 14,
+								},
 								tickfont: {
 									size: 8,
 								}
 							},
 							yaxis: {
 								fixedrange: true,
+								title: "percentage of total",
+								titlefont: {
+									size: 14,
+								},
 								tickfont: {
 									size: 8,
 								}

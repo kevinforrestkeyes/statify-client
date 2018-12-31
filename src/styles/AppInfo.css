@@ -1,0 +1,38 @@
+.module__app-info {
+  max-width: 480px;
+}
+.module__app-info .heading {
+  margin: 0 0 8px 0;
+  font-weight: 200;
+  font-size: 36px;
+}
+.module__app-info .sub-heading {
+  margin: 0;
+  font-weight: 200;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.module__app-info .author-tag a {
+  display: flex;
+  align-items: center;
+  text-decoration: none currentcolor solid;
+}
+.module__app-info .author-tag a .sub-heading {
+  all: unset;
+  margin-bottom: 0;
+  margin: 0;
+  font-weight: 200;
+  font-size: 18px;
+  color: #000;
+}
+.module__app-info .author-tag a .github-profile {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+}
+.module__app-info .info-body p {
+  font-weight: 200;
+  font-size: 14px;
+  margin: 4px 0;
+}

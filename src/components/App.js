@@ -6,6 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.handleControlClick = this.handleControlClick.bind(this);
+    this.toggleInfo = this.toggleInfo.bind(this);
     const params = this.getHashParams();
     const token = params.access_token;
     this.getToken = function() {
@@ -13,6 +14,7 @@ class App extends Component {
     };
     this.state = {
       loggedIn: token ? true : false,
+      showInfo: false,
       nowPlaying: {
         name: 'Not Checked',
         albumArt: '',
@@ -38,7 +40,20 @@ class App extends Component {
     return hashParams;
   }
 
+  toggleInfo() {
+    if(this.state.showInfo) {
+      this.setState({
+        showInfo: false
+      })
+    } else {
+      this.setState({
+        showInfo: true
+      })
+    }
+  }
+
   handleControlClick(setting, value) {
+    console.log(this);
     if (setting === 'term') {
       this.setState({
         contentView: {
@@ -68,37 +83,45 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {!this.state.loggedIn && (
-          <Module token={this.getToken()} module="login" />
-        )}
-        {this.state.loggedIn && (
-          <div className="app-content">
-            <div className="top-bar">
-              <Module token={this.getToken()} module="user_info" />
-              <Module token={this.getToken()} module="now_playing" />
-              <Module
-                module="control"
-                handleControlClick={this.handleControlClick}
-              />
-            </div>
-            <div className="content-section">
-              <Module
-                token={this.getToken()}
-                module="plot"
-                term={this.state.contentView.term + '_term'}
-                area={this.state.contentView.area}
-                metric={this.state.contentView.metric}
-              />
-              <Module
-                token={this.getToken()}
-                module="top"
-                term={this.state.contentView.term + '_term'}
-                area={this.state.contentView.area}
-              />
-            </div>
+      <div className="App" data-show-info={this.state.showInfo}>
+      {!this.state.loggedIn && (
+        <Module token={this.getToken()} module="login" />
+      )}
+      {this.state.loggedIn && (
+        <div className="app-content">
+          <div className="top-bar">
+            <Module token={this.getToken()} module="user_info" />
+            <Module token={this.getToken()} module="now_playing" />
+            <Module
+              module="control"
+              handleControlClick={this.handleControlClick}
+            />
           </div>
-        )}
+          <div className="content-section">
+            <Module
+              token={this.getToken()}
+              module="plot"
+              term={this.state.contentView.term + '_term'}
+              area={this.state.contentView.area}
+              metric={this.state.contentView.metric}
+            />
+            <Module
+              token={this.getToken()}
+              module="top"
+              term={this.state.contentView.term + '_term'}
+              area={this.state.contentView.area}
+            />
+          </div>
+        </div>
+      )}
+      <div className="info-content">
+        <Module token={this.getToken()} module="app_info"/>
+      </div>
+      <div className="info-button">
+        <button onClick={this.toggleInfo}>
+          <img src="/tooltip.png" className="info" alt="info"/>
+        </button>
+      </div>
       </div>
     );
   }

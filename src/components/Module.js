@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NowPlayingModule from './NowPlayingModule.js';
 import LoginModule from './LoginModule.js';
+import InfoModule from './AppInfoModule.js';
 import UserInfoModule from './UserInfoModule.js';
 import TopModule from './TopModule.js';
 import ControlModule from './ControlModule.js';
@@ -20,8 +21,8 @@ class Module extends Component {
 	}
 
 	checkForEmptyModule = () => {
-		const child_module = document.querySelector('.module.' + this.props.module)
-			.children[0];
+		const current_module = document.querySelector('.module.' + this.props.module);
+		const child_module = current_module.children[0];
 		if (
 			child_module.classList.contains('inactive') &&
 			this.state.active === 'active'
@@ -42,7 +43,12 @@ class Module extends Component {
 	render() {
 		return (
 			<div className={'module ' + this.props.module + ' ' + this.state.active}>
-				{this.props.module === 'login' && <LoginModule />}
+				{this.props.module === 'login' && (
+					<LoginModule />
+				)}
+				{this.props.module === 'app_info' && (
+					<InfoModule />
+				)}
 				{this.props.module === 'user_info' && (
 					<UserInfoModule token={this.props.token} />
 				)}

@@ -1,36 +1,58 @@
 .App {
   background-color: #CACFEA;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   min-height: 100vh;
   box-sizing: border-box;
   padding-bottom: 24px;
   padding-right: 12px;
 }
-.App .app-content {
-  width: 100%;
+.App[data-show-info="false"] .app-content {
+  width: calc(100% - 24px);
 }
-.App .app-content .top-bar {
+.App[data-show-info="false"] .app-content .top-bar {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 768px) {
-  .App .app-content .top-bar {
+  .App[data-show-info="false"] .app-content .top-bar {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.App .app-content .content-section {
+.App[data-show-info="false"] .app-content .content-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
 @media (max-width: 768px) {
-  .App .app-content .content-section {
+  .App[data-show-info="false"] .app-content .content-section {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+.App[data-show-info="false"] .info-content {
+  display: none;
+}
+.App[data-show-info="true"] .app-content {
+  display: none;
+}
+.App[data-show-info="true"] .info-content {
+  width: calc(100% - 24px);
+  display: block;
+}
+.App .info-button {
+  display: block;
+  max-width: 18px;
+  padding-top: 12px;
+}
+.App .info-button button {
+  all: unset;
+  cursor: pointer;
+}
+.App .info-button button img {
+  max-width: 100%;
 }

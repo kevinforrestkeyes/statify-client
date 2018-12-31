@@ -9,8 +9,6 @@ class ControlModule extends Component {
 		};
 	}
 
-	componentDidMount() {}
-
 	handleControlClick(setting, value) {
 		const active_button = document.querySelector('[data-value=' + value + ']');
 		const parent_element = active_button.parentElement;
