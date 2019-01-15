@@ -1,10 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../styles/LoginModule.css';
 
 class LoginModule extends Component {
 	constructor() {
 		super();
 		this.state = {};
+	}
+
+	componentDidMount() {
+		console.log(process.env);
 	}
 
 	render() {
