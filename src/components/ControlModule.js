@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../styles/ControlModule.css';
 
 class ControlModule extends Component {
@@ -10,7 +10,7 @@ class ControlModule extends Component {
 	}
 
 	handleControlClick(setting, value) {
-		const active_button = document.querySelector('[data-value=' + value + ']');
+		const active_button = document.querySelector(`[data-value=${value}]`);
 		const parent_element = active_button.parentElement;
 		if (setting === 'metric') {
 			const metric_parent = parent_element.parentElement;

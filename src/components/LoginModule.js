@@ -7,14 +7,10 @@ class LoginModule extends Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
-		console.log(process.env);
-	}
-
 	render() {
 		return (
 			<div className="module__login">
-				<a className="login-button" href="https://statify-server.herokuapp.com/">
+				<a className="login-button" href={process.env.REACT_APP_LOGIN_URL}>
 					get started
 				</a>
 			</div>
