@@ -7,6 +7,12 @@
   display: inline-block;
   border: 0px solid #575A71;
 }
+
+@media (max-width: 600px) {
+  .module {
+    width: calc(100% - 12px);
+  }
+}
 .module.inactive {
   display: none;
 }
