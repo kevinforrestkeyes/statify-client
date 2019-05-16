@@ -55,4 +55,6 @@
 }
 .App .info-button button img {
   max-width: 100%;
+  background-color: #cbcfeb;
+  border-radius: 10px;
 }
